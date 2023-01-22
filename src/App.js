@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./profile/Profile" ;
+
+
+const handlclick= (name)=>{
+  return alert("Hello from the profile usr"+name);
+}
 
 function App() {
+  const fullName=" Jawher Rjab"
+  const Bio=" Hello from jawher's bio sorry for the delay"
+  const Profession= " full stack developer and data scientist kan 7ab rabi"
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{
+      height: "500px",
+      backgroundSize: "cover",
+      marginTop: "20px",
+      padding: "50px",
+      justifyContent:"center",
+      borderRadius:"5"
+      
+      
+
+
+    }}>
+      
+ 
+ 
+      <Profile fullName={fullName} Bio={Bio} Profession={Profession} handlclick={handlclick} />
+      
     </div>
   );
 }
